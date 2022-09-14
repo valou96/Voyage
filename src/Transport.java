@@ -6,18 +6,36 @@ public class Transport extends OptionVoyage {
     public static int TARIF_BASE = 200;
 
 
-    public Transport(boolean trajetLong, int TARIF_BASE, int TARIF_LONG){
+    public Transport(String nom, double PrixForfait, boolean trajetLong){
 
+        super(nom,PrixForfait);
         this._trajetLong = trajetLong;
-        this.TARIF_BASE = TARIF_BASE;
-        this.TARIF_LONG = TARIF_LONG;
         
-
-
     }
 
+    public Transport(String nom, double PrixForfait){
+
+        super(nom,PrixForfait);
+        this._trajetLong = false;
+        
+    }
+    
+    public double prix(){
+        double result = 0;
+        if(_trajetLong == true){
+            result = TARIF_LONG;
+        }
+        else 
+            result = TARIF_BASE;
+        
+        result = result + super.prix();
+
+        return result;
+        }
+    }
+ 
 
 
 
 
-}
+
