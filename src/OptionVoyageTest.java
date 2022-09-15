@@ -27,15 +27,23 @@ public class OptionVoyageTest {
 
     @Test
     public void testprixtranspotFalse(){
-        Transport trasportLong = new Transport("Londres", 50.00, false);
-        assertEquals(250, trasportLong.prix(), DELTA);
+        Transport transportLong = new Transport("Londres", 50.00, false);
+        assertEquals(250, transportLong.prix(), DELTA);
 
     }
 
     @Test
     public void testprixtranspotTrue(){
-        Transport trasportLong = new Transport("Londres", 50.00, true);
-        assertEquals(1550, trasportLong.prix(), DELTA);
+        Transport transportLong = new Transport("Londres", 50.00, true);
+        assertEquals(1550, transportLong.prix(), DELTA);
+
+    }
+
+    
+    @Test
+    public void testtoStringSejour(){
+        Sejour sejour1 = new Sejour("bamako", 50, 3,30 );
+        assertEquals("bamako -> 140.0 euros", sejour1.toString());
 
     }
 }

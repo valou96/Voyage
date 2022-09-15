@@ -33,7 +33,7 @@ public class OptionVoyage {
 
     public String toString(){
         String result;
-        result= _Nom +" -> "+ _PrixForfait +" euros";
+        result= _Nom +" -> "+ prix() +" euros";
         return result;
 
     }

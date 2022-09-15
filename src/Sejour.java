@@ -11,13 +11,12 @@ public class Sejour extends OptionVoyage {
 
     }
 
-    public double prixSejour(){
+    public double prix(){
         double prixSejour;
         prixSejour = _NbNuit * _PrixByNuit + super.prix();
         return prixSejour;
-
-
     }
+
 
 
 }
